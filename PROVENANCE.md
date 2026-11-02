@@ -9,4 +9,4 @@ This repository is an independent HLS-style recreation developed for this projec
 - Historical HLS evidence is linked from the guides; original tutorial videos and source archives are not redistributed here.
 - .NET Framework reference assemblies are build inputs obtained separately from Microsoft's reference package; they are not bundled.
 
-This private testing publication does not select an open-source license.
+This testing publication does not select an open-source license.
