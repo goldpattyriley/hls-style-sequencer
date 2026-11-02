@@ -1,2 +1,4 @@
-PASS: extracted ZIP demo resolves its local WAV and identified control file, schema4/layout2/raw12, prepared plan, five638-byte recording packets, and legacy custom-demo migration. No audio/native output/visible UI opened.
-PASS: exact I386/GUI/CLR4/CorFlags3 inspected. ZIP CRC and every packaged SHA256 checked. Source and full net40 reference hashes are in validation.json.
+PASS: HLS-Sequencer.exe alone starts via the normal startup factory, extracts five editable resources and resolves audio/preview.
+PASS:228 full checks from a one-file application folder, no adjacent config/audio/projects/libraries.
+PASS: six pinned official fullNET4 reference hashes, C#4/x86/GUI/CLR4/CorFlags3, Windows7 asInvoker manifest.
+No visible application, audio device, LAN or COM hardware opened. ActualWin7 machine execution remains unverified.

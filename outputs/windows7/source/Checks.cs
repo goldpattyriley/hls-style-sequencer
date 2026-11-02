@@ -23,10 +23,11 @@ namespace HlsRecreation
 
         public static int Run(string directory)
         {
-            Directory.CreateDirectory(directory); lines.Clear(); count = 0; ProjectDialog.SuppressErrorDialogs = true;
+            directory=Path.GetFullPath(directory); Directory.CreateDirectory(directory); lines.Clear(); count = 0; ProjectDialog.SuppressErrorDialogs = true;
             try
             {
-                Project p = Model.Seed(); Model.RequireValid(p);
+                string examplesPath=BundledExamples.EnsureExamples(Path.Combine(directory,"included-examples"));
+                Project p = Model.Seed(); p.AudioFile=Path.Combine(Path.GetDirectoryName(examplesPath),"demo.wav"); Model.RequireValid(p);
                 Check(typeof(Project).Assembly.GetName().ProcessorArchitecture == ProcessorArchitecture.X86, "native assembly targets x86 for 32/64-bit Windows 7");
                 Check(typeof(Project).Assembly.GetReferencedAssemblies().All(delegate(AssemblyName a) { return a.Version.Major == 4 && a.Version.Minor == 0; }), "runtime references are .NET Framework 4 assemblies");
                 Check(p.Channels.Count >= 12 && p.Groups.Count >= 3 && p.Segments.Count >= 2 && p.PixelPlanes.Count >= 1, "seed has raw channels, flexible groups, Segments and PixelPlane");
@@ -138,7 +139,7 @@ namespace HlsRecreation
                     reader.BaseStream.Position = offset + (700 / p.FrameMs) * slots;
                     Check(reader.ReadBytes(slots).SequenceEqual(Model.RenderFrame(p, (700 / p.FrameMs) * p.FrameMs)), "exported frame equals direct sampling including hierarchy mapping");
                 }
-                float[] waveform = AudioClock.ReadWaveform(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "demo.wav"), 960);
+                float[] waveform = AudioClock.ReadWaveform(Path.Combine(Path.GetDirectoryName(examplesPath), "demo.wav"), 960);
                 Check(waveform.Length == 960 && waveform.Max() > .1f, "original WAV decoded for waveform without opening audio device");
                 RenderForms(p, directory);
                 using (MainForm opened = new MainForm(new EditSession(p)))
@@ -185,6 +186,7 @@ namespace HlsRecreation
                 CustomLibraryChecks.Run(directory, Check, Reject);
                 LargeProjectChecks.Run(directory, Check);
                 DisplayOutputChecks.Run(directory, Check, Reject);
+                BundledExampleChecks.Run(directory, Check, Reject);
                 lines.Add("PASS: " + count + " checks. No visible windows or audio device were opened. Actual Windows 7 execution is unverified.");
                 File.WriteAllLines(Path.Combine(directory, "validation.txt"), lines.ToArray());
                 return 0;

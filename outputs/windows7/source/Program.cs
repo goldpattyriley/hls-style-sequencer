@@ -7,13 +7,20 @@ using System.Windows.Forms;
 
 [assembly: AssemblyTitle("HLS-style Sequencer")]
 [assembly: AssemblyDescription("Original Windows 7 targeted HLS workflow recreation")]
-[assembly: AssemblyVersion("0.4.0.0")]
+[assembly: AssemblyVersion("0.4.1.0")]
 [assembly: TargetFramework(".NETFramework,Version=v4.0", FrameworkDisplayName = ".NET Framework 4")]
 
 namespace HlsRecreation
 {
     internal static class Program
     {
+        private static MainForm CreateStartupForm(string[] args,string examplesDirectory)
+        {
+            string demo=BundledExamples.EnsureExamples(examplesDirectory);
+            string path=args.Length==1?Path.GetFullPath(args[0]):demo;
+            MainForm form=new MainForm(new EditSession(ProjectIO.Load(path)));
+            try{form.LoadProject(path);return form;}catch{form.Dispose();throw;}
+        }
         [STAThread]
         private static int Main(string[] args)
         {
@@ -34,14 +41,26 @@ namespace HlsRecreation
                     }
                     return 0;
                 }
-                Project project = args.Length == 1 ? ProjectIO.Load(args[0]) : Model.Seed();
-                using (MainForm form = new MainForm(new EditSession(project)))
-                { if (args.Length == 1) form.LoadProject(args[0]); Application.Run(form); }
+                if(args.Length == 2 && args[0] == "--startup-check")
+                {
+                    string checkDirectory=Path.GetFullPath(args[1]);Directory.CreateDirectory(checkDirectory);
+                    using(MainForm form=CreateStartupForm(new string[0],Path.Combine(checkDirectory,"examples")))
+                    using(Bitmap bitmap=new Bitmap(1280,880))
+                    {
+                        form.RecoveryEnabled=false;form.ClientSize=bitmap.Size;Checks.PrepareHiddenControl(form);
+                        form.DrawToBitmap(bitmap,new Rectangle(Point.Empty,bitmap.Size));bitmap.Save(Path.Combine(checkDirectory,"startup.png"));
+                        Project p=form.Session.Project;
+                        if(!File.Exists(p.AudioFile)||!PreviewLayouts.IsCurrent(p))throw new InvalidDataException("Bundled startup references did not resolve.");
+                        File.WriteAllText(Path.Combine(checkDirectory,"startup.txt"),"PASS: normal startup constructs the editable demo from one executable, with local WAV and current preview, no config/sidecars, no visible UI/audio/device output.");
+                    }
+                    return 0;
+                }
+                using(MainForm form=CreateStartupForm(args,BundledExamples.DefaultDirectory)) Application.Run(form);
                 return 0;
             }
             catch (Exception error)
             {
-                if (args.Length == 2 && (args[0] == "--self-test" || args[0] == "--render"))
+                if (args.Length == 2 && (args[0] == "--self-test" || args[0] == "--render" || args[0] == "--startup-check"))
                     File.WriteAllText(args[1] + ".error.txt", error.ToString());
                 else MessageBox.Show(error.Message, "HLS-style Sequencer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;

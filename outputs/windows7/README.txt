@@ -1,17 +1,23 @@
-HLS-STYLE SEQUENCER 0.4  -  DISPLAY PREVIEW AND CONTROLLER OUTPUT
+HLS-STYLE SEQUENCER 0.4.1 - SINGLE EXECUTABLE FOR WINDOWS 7
 
-Extract the complete ZIP and run HlsStyleSequencer-0.4.exe.
-Keep its .exe.config and demo.wav alongside it. The new filename preserves
-older running versions; those older programs do not acquire these changes.
+Download HLS-Sequencer.exe and double-click it.
+No .exe.config, ZIP extraction or separate demo files are needed.
+The app opens with an editable demo. File > Open included example finds others.
 
-Target: Windows 7 x86/x64 with FULL .NET Framework 4.0 or compatible later 4.x.
-Native C#4/WinForms, built against exact full .NET4.0 reference assemblies.
-No browser, Python, Node, Electron or WebView is needed to run the application.
-Actual execution on Windows7 and real controller hardware remain unverified.
+Windows 7 x86/x64 requires FULL Microsoft .NET Framework 4.0 (or a compatible
+later4.x already installed). If Windows asks for .NET, get the official installer:
+https://www.microsoft.com/en-us/download/details.aspx?id=17718
+
+Examples are built into the executable and copied automatically to:
+%LOCALAPPDATA%\HlsStyleSequencer\Examples\0.4.1
+Existing examples are never overwritten. User project files remain editable.
+No administrator elevation is requested by the application.
+
+Exact C#4/x86/fullNET4 build; actual Windows7-machine execution is unverified.
 
 DISPLAY PREVIEW  -  HLS ORDER OF OPERATIONS
 
-1. Open display-demo.hlsr for the supplied authored roof/arch sequence, or use
+1. The app opens the included display-demo.hlsr automatically, or use
    your existing .hlsr project. Schema2/3 files upgrade in memory to schema4.
    Original HLS project/control formats are not supported.
 2. Manage Channels > Manage Raw Channels: physical Universe/Address/Output
@@ -160,13 +166,13 @@ Audio uses local16-bit PCM WAV. Controller/optical timing remains unverified.
 
 REPRODUCE CHECKS
 
-HlsStyleSequencer-0.4.exe --self-test checks
+HLS-Sequencer.exe --self-test checks
 
 Writes validation logs and actual offscreen WinForms bitmaps; opens no visible
 window, audio device, LAN controller or COM port. Native UDP is checked only
 against a receiver it owns on127.0.0.1 and an ephemeral port. Fake/recording
 transports verify errors, arming, blackout and stop-timeout recovery. Allow
-roughly60MB for large-file fixtures. The213-check release gate passed. See validation.txt/json and manifest.json.
+roughly60MB for large-file fixtures. The228-check standalone release gate passed. See validation.txt/json and manifest.json.
 
 REBUILD
 

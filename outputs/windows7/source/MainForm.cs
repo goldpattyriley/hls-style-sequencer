@@ -34,7 +34,7 @@ namespace HlsRecreation
         public bool IsDirty { get { return dirty; } }
         public MainForm(EditSession initial)
         {
-            session = new EditSession(ResolveAudioReference(initial.Project, null)); Text = "HLS-style Sequencer - Windows 7"; Size = new Size(1240, 780); MinimumSize = new Size(1000, 650);
+            session = new EditSession(ResolveAudioReference(initial.Project, null)); Text = "HLS-style Sequencer 0.4.1 - Windows 7"; Size = new Size(1240, 780); MinimumSize = new Size(1000, 650);
             Font = new Font("Tahoma", 8.25f); Build(); session.Changed += SessionChanged;
             timer.Interval = 25; timer.Tick += Tick; RefreshUi(); ReloadWaveform();
         }
@@ -44,6 +44,7 @@ namespace HlsRecreation
             ToolStripMenuItem file = new ToolStripMenuItem("File"), audio = new ToolStripMenuItem("Audio File"), manage = new ToolStripMenuItem("Manage Channels");
             file.DropDownItems.Add("New", null, delegate { if (ConfirmDiscard()) ReplaceProject(Model.Empty(), null); });
             file.DropDownItems.Add("Open...", null, Open); file.DropDownItems.Add("Save", null, delegate { SaveCurrent(); });
+            file.DropDownItems.Add("Open included example...", null, delegate { Guard(delegate { BundledExamples.EnsureExamples(BundledExamples.DefaultDirectory); using(OpenFileDialog open=new OpenFileDialog{Filter="HLS-style projects (*.hlsr)|*.hlsr",InitialDirectory=BundledExamples.DefaultDirectory}) if(open.ShowDialog(this)==DialogResult.OK&&ConfirmDiscard()) LoadProject(open.FileName); }); });
             file.DropDownItems.Add("Save As...", null, delegate { SaveAs(); }); file.DropDownItems.Add("Restore recovery", null, RestoreRecovery);
             file.DropDownItems.Add("Export FSEQ...", null, Export);
             audio.DropDownItems.Add("Add WAV file for this sequence...", null, ChooseAudio);
@@ -139,7 +140,7 @@ namespace HlsRecreation
             timeline.ClearSelection(); timeline.Project = p; timeline.GroupId = activeGroup; timeline.Invalidate(); preview.Project = p; preview.Frame = null; preview.Invalidate();
             layoutPreview.Project = p; layoutPreview.Frame = null; layoutPreview.Visible = p.Layout.Elements.Count != 0; preview.Visible = !layoutPreview.Visible; layoutPreview.Invalidate();
             if(compiledShowPath != null) compiledShowPath = Path.GetFullPath(compiledShowPath);
-            Text = "HLS-style Sequencer - " + p.Name + (dirty ? " *" : "") + " - Windows 7 target";
+            Text = "HLS-style Sequencer 0.4.1 - " + p.Name + (dirty ? " *" : "") + " - Windows 7 target";
         }
         private string AudioPath()
         {
@@ -365,6 +366,11 @@ namespace HlsRecreation
             if(!String.IsNullOrEmpty(copy.Layout.BackgroundImage) && !Path.IsPathRooted(copy.Layout.BackgroundImage)) copy.Layout.BackgroundImage = Path.GetFullPath(Path.Combine(directory,copy.Layout.BackgroundImage));
             if(!String.IsNullOrEmpty(copy.Layout.ControlFile) && !Path.IsPathRooted(copy.Layout.ControlFile)) copy.Layout.ControlFile = Path.GetFullPath(Path.Combine(directory,copy.Layout.ControlFile));
             if (!Path.IsPathRooted(copy.AudioFile)) copy.AudioFile = Path.GetFullPath(Path.Combine(path == null ? AppDomain.CurrentDomain.BaseDirectory : Path.GetDirectoryName(Path.GetFullPath(path)), copy.AudioFile));
+            if(path==null && String.Equals(Path.GetFileName(copy.AudioFile),"demo.wav",StringComparison.OrdinalIgnoreCase) && !File.Exists(copy.AudioFile))
+            {
+                string includedAudio=Path.Combine(BundledExamples.DefaultDirectory,"demo.wav");
+                if(File.Exists(includedAudio))copy.AudioFile=includedAudio;
+            }
             return copy;
         }
         public void SetFrameInterval(int milliseconds) { Project p = session.Project; p.FrameMs = milliseconds; session.Commit(p, "Time resolution " + milliseconds + "ms"); }

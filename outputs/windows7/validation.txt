@@ -211,4 +211,19 @@ PASS: controller changes invalidate compiled playback data
 PASS: locked manifest rejects a compile publication
 PASS: failed manifest publication restores the previously current FSEQ/manifest pair
 PASS: externally modified rendered data is detected by file hash
-PASS: 213 checks. No visible windows or audio device were opened. Actual Windows 7 execution is unverified.
+PASS: one executable contains demo audio, both editable samples, preview and library
+PASS: bundled startup project resolves inside the requested writable examples folder
+PASS: bundled demo.wav extracts byte-for-byte without sidecars
+PASS: bundled display-demo.hlsr extracts byte-for-byte without sidecars
+PASS: bundled display-demo.hlsrpreview extracts byte-for-byte without sidecars
+PASS: bundled custom-demo.hlsr extracts byte-for-byte without sidecars
+PASS: bundled handcrafted.hlsrlib extracts byte-for-byte without sidecars
+PASS: automatically created editable demo resolves its audio and active preview
+PASS: relaunch never overwrites a user's edited example project
+PASS: relaunch repairs a missing bundled asset while preserving existing user data
+PASS: simultaneous startups publish examples without clobbering or partial files
+PASS: successful parallel extraction leaves only the five complete example files
+PASS: invalid extraction target reports an error without removing existing data
+PASS: failed startup preserves an existing non-directory target
+PASS: example extraction rejects a drive root
+PASS: 228 checks. No visible windows or audio device were opened. Actual Windows 7 execution is unverified.

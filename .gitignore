@@ -15,8 +15,6 @@
 !/outputs/windows7/CustomEffectsDialog.png
 !/outputs/windows7/EffectLibraryDialog.png
 !/outputs/windows7/GroupManager.png
-!/outputs/windows7/HlsStyleSequencer-0.4.exe.config
-!/outputs/windows7/HlsStyleSequencer.exe.config
 !/outputs/windows7/OutputSetupDialog.png
 !/outputs/windows7/OutputTestDialog.png
 !/outputs/windows7/PixelPlaneManager.png
@@ -45,3 +43,4 @@
 !/outputs/windows7/validation.json
 !/outputs/windows7/validation.txt
 !/outputs/windows7/manifest.json
+!/outputs/windows7/single-exe-startup.png

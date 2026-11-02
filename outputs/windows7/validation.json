@@ -1,42 +1,30 @@
 {
-  "version": "0.4.0.0",
-  "target": "Windows7 x86/x64; FULL .NET Framework4.0",
-  "build": "C#4 /nostdlib explicit official full net40 reference assemblies; warning-free",
+  "version": "0.4.1.0",
+  "target": "Windows7 x86/x64 with FULL .NET Framework4.0 installed",
+  "distribution": "Single HLS-Sequencer.exe, embedded examples, no .exe.config or sidecars",
+  "checks": 228,
+  "isolated_startup": "PASS: actual normal-startup factory, hidden own native render, current preview and local audio, folder contains only executable",
+  "isolated_full_gate": "PASS:228 checks from same one-file folder",
   "pe": {
     "machine": "I386",
     "subsystem": "Windows GUI",
     "clr": "v4.0.30319",
     "corflags": 3
   },
-  "checks": 213,
-  "gate": "validation.txt (213 PASS)",
-  "scope": [
-    "all125 prior channel/custom/library/above16MB regressions",
-    "preview geometry, mapping, clone/save/cancel, stale control hashes and explicit Compile/Identify",
-    "E1.31 exact packet vectors and Renard escaping/range/capacity",
-    "lazy arming, bounded recordings, failure-safe blackout, worker join/timeout retry",
-    "owned ephemeral127.0.0.1 UDP native sink; five638-byte datagrams",
-    "actual offscreen native UI; compiled-show rollback on locked manifest; portability verification recorded separately"
-  ],
-  "unverified": [
-    "actualWindows7 execution",
-    "visible/manual native interaction",
-    "realNIC/COM controllers and hardware drivers",
-    "received/optical audio synchronization or higher physical frame rates",
-    "original HLS file compatibility and complete final-version UI parity"
-  ],
-  "resources": {
-    "final_self_test_pid": 4868,
-    "self_test_exit": 0,
-    "task_owned_background_services": 0,
-    "old_user_executables": "preserved; never stopped or replaced",
-    "package_check_pid": 37432,
-    "package_check_exit": 0
+  "net40_reference_sha256": {
+    "mscorlib.dll": "f7a62c9392d6762f5b46c76149173e2f265d6ad05aae54290ff40573ab32190e",
+    "System.Core.dll": "152e1f68ef7c982795faa5a68b1f087750b05bcbac2603442a3b23bac43e69c3",
+    "System.dll": "b6dc62e2437b39f48b5c3368e0d14f86cf00fbf0c76d2685026aafca7e9b50f7",
+    "System.Drawing.dll": "a8a134b773bdb25be802c76e3f4990b87c663748e8a71a596de62cd197aaab33",
+    "System.Windows.Forms.dll": "204e5165c79151c134121b602cf47d0009e3763de92f88b07896ca67fd5c83af",
+    "System.Xml.dll": "6c13e62f31bb034f82acd06446444611418b15c8be9633a6d4f9189759b1811e"
   },
   "source_sha256": {
-    "app.manifest": "bec73f8f6150bedee8b5b3ce03f4de83f75985bb66786107cd3806d64b238e1c",
+    "app.manifest": "a73ed01a3453db73161a8a6ae9a2dd2b2412363ce2a6342b7005e0e0ad3ec32a",
     "AudioClock.cs": "12c2a1d46668ef11f3fd1beec6bdb29350bcfe893fe22c0e8568393ae0ee3921",
-    "Checks.cs": "f364e663f14bdf68aa9a6a18b4b4dfa00f006925d42bad79d2a4e11465f75f57",
+    "BundledExampleChecks.cs": "a6e63986e779ef1e1061ff21ab635fb98185269a9e806022fd3619cb61730be8",
+    "BundledExamples.cs": "21b37bd78f3e90d9e067bd7384d6a59c8c5fb9cdc22bdbb40124a90c8027721a",
+    "Checks.cs": "8c581518d848e5870291f8e6be7314e87f78634cbb1f039469756a951fd0fb0b",
     "CompiledShowIO.cs": "17d64c7a69a079b3f3527e08a5ee1b20334dae72653eee18bd4ea96329e14c2d",
     "ControllerOutput.cs": "0a9e83c3ff9a35bc10273eebd59b473a76f50aceb12f14e0514c16de732f073f",
     "CustomEffects.cs": "7631e3589fd473b184290d8d4c86dc0614e4fdbeff8f7888031db93e023027fd",
@@ -47,7 +35,7 @@
     "EffectLibraryDialog.cs": "61cfaf7585442c94a1060b484098560af9baea88ce1cb7edf9cc0d8cd3d327a8",
     "LargeProjectChecks.cs": "d1e648e8090333658ece1ac0d6534921ffec947ff7a78392ad5476c6f84a5bf2",
     "LayoutCanvas.cs": "8ad7773d22f6d62e0227453267c3b0e3edb3a4ec84ce2570f117277a81691f92",
-    "MainForm.cs": "b019ca0799efed0b0864d9bbb84462d94761ffc3c0e4878eaabecd8e5ed76624",
+    "MainForm.cs": "20a6debd5527f3f8b5c682d6718c17bf734a1efc56cfeba52d77ff8ba349918b",
     "Managers.cs": "23637c71c634aba0df099dabf89f096dd72465854e36da5ebba34893a77a2060",
     "Model.cs": "9263d4ba46252b85bb73b306b1712a650bd9c8f93ac7cbe85c08b9ee2568373c",
     "OutputSetupDialog.cs": "051bf9e5397af3129b5ea4b8d8e93b458983948776ed8832f214031517f3abe2",
@@ -55,7 +43,7 @@
     "PixelPlaneManager.cs": "7c56415131d3ef38b69537810e68983882ff87199ee3de4b6e09f0f9a499d07f",
     "PreviewLayoutDialog.cs": "3ea142e2fc7a6bef9979d247e190c5ce425fcc8adc2f234e1860862232650a69",
     "PreviewLayouts.cs": "51c781faf8a557179d5932fc8bb6bf8e12b3d414af4eb1ecfb134e0104bf1e21",
-    "Program.cs": "c94b1fcae57f3a301266c0bb4d2b3e965afdb71f554437911e1d7023c049f934",
+    "Program.cs": "9862b4b9f0aa440f812d6a4b1d6424217073079042b96c2b6de4f09d1f9a5f96",
     "ProjectIO.cs": "5ae6b8aed059f8d5c8317c7241434db0cf012b03c3a369a4bca0ca4ec455af8c",
     "RawChannelManager.cs": "baaf84982312cfc4778107d3e207cafce9705c09d68e4889f2f7deadca593be1",
     "SequenceXml.cs": "28f82dd007b61fe093dc241c53841cc6be12581b686b3800c98dfed5ab6af76b",
@@ -63,13 +51,14 @@
     "TimelineView.cs": "038c2d30a684616a1fdd219a586570db25f9dee4f8bf6166c1c3a019c24ce0b8",
     "UiSupport.cs": "4fa37e6fd3c853124f8977d44d98ceef2b5c9028a4d8d2d55cf2482796d3d0b6"
   },
-  "net40_reference_sha256": {
-    "mscorlib.dll": "f7a62c9392d6762f5b46c76149173e2f265d6ad05aae54290ff40573ab32190e",
-    "System.Core.dll": "152e1f68ef7c982795faa5a68b1f087750b05bcbac2603442a3b23bac43e69c3",
-    "System.dll": "b6dc62e2437b39f48b5c3368e0d14f86cf00fbf0c76d2685026aafca7e9b50f7",
-    "System.Drawing.dll": "a8a134b773bdb25be802c76e3f4990b87c663748e8a71a596de62cd197aaab33",
-    "System.Windows.Forms.dll": "204e5165c79151c134121b602cf47d0009e3763de92f88b07896ca67fd5c83af",
-    "System.Xml.dll": "6c13e62f31bb034f82acd06446444611418b15c8be9633a6d4f9189759b1811e"
-  },
-  "package_portability": "PASS: relocated extracted ZIP, local WAV/control references, editable sample and legacy schema upgrade; recording-only"
+  "not_verified": [
+    "actualWindows7 OS execution",
+    "human native interaction",
+    "physical controllers/COM drivers or optical/audio timing"
+  ],
+  "resources": {
+    "owned_checks": "two finite hidden processes exited0; threads/transports disposed",
+    "owned_background_services": 0,
+    "old_running_executables_and_configs": "preserved; not stopped or overwritten"
+  }
 }
