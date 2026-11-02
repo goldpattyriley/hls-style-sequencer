@@ -1,0 +1,214 @@
+PASS: native assembly targets x86 for 32/64-bit Windows 7
+PASS: runtime references are .NET Framework 4 assemblies
+PASS: seed has raw channels, flexible groups, Segments and PixelPlane
+PASS: clone separates changes and retains stable channel identity
+PASS: bulk RGB address assignment respects 512-slot universe boundary
+PASS: physical RGB overlap rejected
+PASS: duplicate raw output-order values rejected before wiring wizard
+PASS: output-order increment cannot wrap into negative values
+PASS: transparent or named colors cannot become unintended white output
+PASS: oversized curve list rejected
+PASS: oversized spatial frame list rejected
+PASS: time effects reject inert PixelPlane speed/fade fields
+PASS: universe-zero authoring channel produces no physical output
+PASS: group and Segment labels use independent naming scopes
+PASS: same raw channel belongs to multiple independently ordered work groups
+PASS: deleting a view group leaves effects and output unchanged
+PASS: display/output-order metadata does not silently rewrite physical address
+PASS: one Segment effect fans out to every raw member
+PASS: referenced raw channel deletion prevented
+PASS: nested/cyclic Segment reference rejected
+PASS: horizontal serpentine wizard maps logical XY to physical channel order
+PASS: vertical serpentine wizard maps logical XY independently
+PASS: future spatial key is dark before its authored key time
+PASS: rewiring PixelPlane mapping preserves authored spatial frame and changes physical destination
+PASS: unmapped PixelPlane hole remains dark
+PASS: PixelPlane dimensions/frame length mismatch rejected
+PASS: PixelPlane row rejects time-domain RampUp primitive
+PASS: half-speed spatial clip delays its second painted frame
+PASS: full-speed spatial clip reaches its second painted frame
+PASS: spatial clip fade-out changes rendered intensity
+PASS: invalid editor transaction rejected
+PASS: rejected transaction does not mutate project or history
+PASS: undo restores project snapshot
+PASS: redo restores edited structure and raises notifications
+PASS: atomic save/load retains IDs, groups and previous-save backup
+PASS: invalid save rejected before touching file
+PASS: failed save preserves previous project bytes
+PASS: project loader prohibits DTD/entity expansion
+PASS: native export FSEQ signature
+PASS: FSEQ v1 dimensions and frame interval
+PASS: exported frame equals direct sampling including hierarchy mapping
+PASS: original WAV decoded for waveform without opening audio device
+PASS: native main form constructs a real timeline offscreen
+PASS: RawChannelManager contains working edit/save controls
+PASS: raw manager displays channel records, not an empty field-binding grid
+PASS: GroupManager contains working edit/save controls
+PASS: SegmentManager contains working edit/save controls
+PASS: PixelPlaneManager contains working edit/save controls
+PASS: spatial editor constructs with seeded fades and actual matrix controls
+PASS: opening a file resets history and saved-file state
+PASS: undo after Open cannot restore a different file into the current save path
+PASS: native time-resolution command selects 100fps data sampling
+PASS: Save As preserves the source audio reference when the project moves folders
+PASS: fine timeline snapping uses project 10ms interval
+PASS: overlap hit-test selects the visible topmost fine-resolution effect
+PASS: waveform/header cannot select row-zero clips
+PASS: minimum-width fine-resolution clip retains an accessible resize edge
+PASS: light preview has scrollable layout beyond one viewport
+PASS: last raw light remains reachable beyond the former 96-channel preview cap
+PASS: group manager adds disjoint selected raw references without moving channels
+PASS: group Up changes that group's row order
+PASS: group Remove keeps underlying channels
+PASS: group Delete removes only the editor view
+PASS: Segment manager authors actual raw membership
+PASS: unused Segment can be deleted without deleting raw channels
+PASS: raw Add retains pending table edits and adds the requested physical channel
+PASS: manager working changes stay isolated until Save
+PASS: invalid numeric raw cell is rejected rather than silently reverted
+PASS: failed grid parse does not partly mutate manager data
+PASS: PixelPlane manager creates dimensions and applies the named serpentine wizard
+PASS: manual PixelPlane empty-cell edit is retained as a hole
+PASS: new PixelPlane is isolated from the original project until Save
+PASS: spatial Add key and cell painting change the selected key only
+PASS: spatial duplicate retains editable painted colors at its new key time
+PASS: spatial delete and Cancel isolation retain original frames
+PASS: Custom curve round-trips on comma-decimal Windows locale
+PASS: custom definition is an ordered seven-cell serial recipe
+PASS: custom placement creates independent primitive copies without changing the source
+PASS: recipe lengths, repeat period and per-row chase offset are preserved
+PASS: 35-to-100 intensity endpoints remain authored ramp data
+PASS: three-cell endpoint ramp renders requested start, middle and last-cell end intensities
+PASS: two-cell down ramp reaches zero on its final selected cell
+PASS: placement color replaces stored line colors in Selected mode
+PASS: Embedded mode retains each authored line color
+PASS: seeded placement realizes reproducible random position/order/color/intensity data
+PASS: random-intensity bounds are applied to ramp endpoints
+PASS: random starts honor an explicitly selected period grid
+PASS: zero coverage produces no stamps
+PASS: non-finite recipe intensities are rejected
+PASS: null recipe collections return validation errors
+PASS: partial recipe placement is rejected instead of silently cut
+PASS: serial time-domain recipes do not silently replace PixelPlane spatial clips
+PASS: placement budget is rejected before generating an oversized primitive graph
+PASS: library capture retains blank rows, full primitive data and rectangular width
+PASS: library capture requires complete edge clips and preserves source effects
+PASS: upper-left insertion preserves every sampled output value with fresh effect identities
+PASS: editing an inserted effect cannot change its library source or prior placements
+PASS: library recipes and committed stamps remain independent of later definition edits
+PASS: library insertion does not silently drop rows below the target view
+PASS: library insertion rejects a frame-step mismatch instead of changing column geometry
+PASS: malformed null-target library effects return validation errors without throwing
+PASS: standalone library save/open and backup retain endpoint primitives and recipe definitions
+PASS: library insertion preserves PixelPlane keys, speed, fade and mapping semantics
+PASS: project round trip retains editable definitions and exact committed ramp output
+PASS: exported custom-effect frame retains the exact authored endpoint output
+PASS: XML collection quotas are enforced while streaming before project graph allocation
+PASS: streaming scalar quotas reject malformed metadata without restoring the old file-size cap
+PASS: schema-2 Open upgrades only the in-memory project
+PASS: custom dialog flushes its grid and commits a materialized placement only to Result
+PASS: custom definition management works before a grid rectangle is chosen
+PASS: placement without a rectangle reports an error without affecting the source
+PASS: definition manager can delete its last recipe without injecting an unwanted replacement
+PASS: an empty project opens an empty Custom manager instead of silently adding a preset
+PASS: New explicitly creates a named editable serial recipe
+PASS: library import produces an isolated project definition copy
+PASS: Import Custom then Close returns an accepting result for MainForm to commit
+PASS: Cancel leaves imported definitions out of the caller project
+PASS: invalid stored-custom edits are guarded during cross-item selection
+PASS: failed library item selection restores the previous editor/entry pairing
+PASS: main library anchor commits the entire insert as one undoable edit
+PASS: undo removes the complete library insertion
+PASS: editing a legacy ramp without authoring endpoints preserves its previous rendering
+PASS: regression fixture contains real sequencing data larger than 16 MB (21441398 bytes)
+PASS: large project save/open retains effect identities and values without a byte-size rejection
+PASS: effect libraries also save/reopen valid groups above the former 16 MB boundary
+PASS: schema4 integrates preview/output without changing handcrafted rendered values
+PASS: playback renderer snapshots edits once and renders without per-frame revalidation
+PASS: polyline nodes follow equal path distances across a hand-drawn roof
+PASS: arch uses both drag coordinates as its bounding box
+PASS: closed strings have distinct first and last pixels
+PASS: matrix nodes preserve serpentine physical order
+PASS: preview RGB uses exact physical frame slots
+PASS: reverse preview assignment is independent of physical patch and source project
+PASS: duplicate raw IDs cannot silently overwrite pixel assignments
+PASS: diagnostics identify orphan raw preview mappings by channel name
+PASS: Save compiles a Preview Control File without silently activating it
+PASS: Identify explicitly activates the compiled Preview Control File
+PASS: moving geometry marks the identified preview control stale
+PASS: changing raw preview mapping marks compiled control stale
+PASS: Identify reuses a layout by channel names while retaining another song's physical patch
+PASS: external or undo-divergent control-file contents invalidate the active preview
+PASS: restoring matching compiled control data restores freshness
+PASS: schema4 saves preview, controller settings and canonical raw mapping
+PASS: schema3 opens as schema4 without rewriting the old file
+PASS: E1.31 ACN preamble and exact638-byte packet
+PASS: E1.31 root/framing/DMP lengths match independently calculated PDU sizes
+PASS: E1.31 CID uses canonical UUID byte order
+PASS: E1.31 sequence, universe, DMP addressing, property count and payload match standard
+PASS: E1.31 UTF8 source name preserves surrogate pairs and termination bit
+PASS: Renard sync, start and all reserved-byte escapes match independent vector
+PASS: Renard ignores E1.31 fields and prepares the configured24-byte route
+PASS: Renard zero-pads unused configured slots beyond the last raw channel
+PASS: duplicate enabled COM routes reject conflicting baud/capacity reuse
+PASS: disabled serial routes do not claim a port
+PASS: E1.31 unicast rejects broadcast destinations
+PASS: controller cadence cannot imply unsupported100fps E1.31 transmission
+PASS: physical start requires explicit arming before any write
+PASS: unarmed physical session performs no transport writes
+PASS: never-started session disposes its transport exactly once
+PASS: recording lifecycle emits original frame, blackout and three stream-termination packets
+PASS: stopped output session cannot restart a disposed transport
+PASS: long dry runs retain a bounded4096-packet recording buffer
+PASS: blackout write failure is reported
+PASS: failed route cannot prevent other-route blackout/termination and exactly-once cleanup
+PASS: native test packet0 came only from owned loopback receiver
+PASS: native test packet1 came only from owned loopback receiver
+PASS: native test packet2 came only from owned loopback receiver
+PASS: native test packet3 came only from owned loopback receiver
+PASS: native test packet4 came only from owned loopback receiver
+PASS: native UDP sink delivers five exact loopback packets and releases its socket
+PASS: output pump skips obsolete frames and joins its worker on stop
+PASS: blocking fake provider entered owned output thread
+PASS: timed-out output join reports retained resources
+PASS: timeout never falsely marks live worker stopped
+PASS: retained worker can be stopped and disposed after provider returns
+PASS: unpatched valid raw channels are diagnosed and excluded without breaking other routes
+PASS: Prepare report lists actual raw names, physical slots and covering routes
+PASS: preview editor preserves full valid group/number/pixel-size ranges
+PASS: mapping table displays one-based preview pixels
+PASS: layout edits remain isolated until Save
+PASS: switching objects flushes pending fields and loads the new canonical selection
+PASS: invalid pending object edit retains selection and draft without partial mutation
+PASS: reordering after a property flush moves the canonical cloned object
+PASS: delete after cloned edits removes the chosen object and loads the remaining properties
+PASS: preview editor reserves the central canvas for actual drawing
+PASS: raw manager exposes HLS preview group/number separately from controller patch
+PASS: editor Save writes a compiled control and leaves explicit Identify for activation
+PASS: output editor preserves valid60000ms interval
+PASS: controller setup edits are cloned and perform no transport writes
+PASS: invalid controller numeric entry rejects before committing the candidate
+PASS: invalid output grid leaves last valid setup intact
+PASS: test dialog defaults to dry run and constructs no output worker
+PASS: arming changes the Start label without creating a transport or worker
+PASS: test without checked raw channels rejects safely
+PASS: dry test runs only recording transport with immutable control snapshots
+PASS: All Off stops and latches blackout without a later relighting frame
+PASS: dry test shutdown sends final stream termination
+PASS: runtime click anywhere on one-node vector reveals its channel
+PASS: single-node vector actually lights from its mapped RGB frame
+PASS: runtime black frame leaves the string dark
+PASS: whole-object movement preserves geometry width at canvas boundary
+PASS: preview light lookup reveals its containing Segment row when raw rows are not in a group
+PASS: native main display/output integration renders without audio or controller activation
+PASS: local background image is rendered in the real preview canvas
+PASS: overwriting a background at the same path refreshes its unlocked bitmap
+PASS: deleting an active background produces a visible diagnostic
+PASS: oversized background metadata is rejected before cloning into x86 preview memory
+PASS: Compile for Show produces matching FSEQ hash and controller/project manifest
+PASS: effect changes invalidate compiled playback data
+PASS: controller changes invalidate compiled playback data
+PASS: locked manifest rejects a compile publication
+PASS: failed manifest publication restores the previously current FSEQ/manifest pair
+PASS: externally modified rendered data is detected by file hash
+PASS: 213 checks. No visible windows or audio device were opened. Actual Windows 7 execution is unverified.

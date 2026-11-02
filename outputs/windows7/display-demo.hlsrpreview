@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreviewControl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1</Version>
+  <Layout>
+    <Width>1000</Width>
+    <Height>700</Height>
+    <BackgroundImage />
+    <BackgroundOpacity>0.5</BackgroundOpacity>
+    <Elements>
+      <PreviewElement>
+        <Id>d4550ffed28a4eacac93d68ebe38d65f</Id>
+        <Name>Roof pixels</Name>
+        <Kind>Polyline</Kind>
+        <Group>1</Group>
+        <Number>1</Number>
+        <NodeCount>6</NodeCount>
+        <Points>
+          <LayoutPoint>
+            <X>0.15</X>
+            <Y>0.38</Y>
+          </LayoutPoint>
+          <LayoutPoint>
+            <X>0.5</X>
+            <Y>0.12</Y>
+          </LayoutPoint>
+          <LayoutPoint>
+            <X>0.85</X>
+            <Y>0.38</Y>
+          </LayoutPoint>
+        </Points>
+        <Rows>1</Rows>
+        <Columns>1</Columns>
+        <Serpentine>false</Serpentine>
+        <Closed>false</Closed>
+        <PixelSize>5</PixelSize>
+      </PreviewElement>
+      <PreviewElement>
+        <Id>0b8258421fcf4a898a09124f8755f443</Id>
+        <Name>Yard arch pixels</Name>
+        <Kind>Arch</Kind>
+        <Group>1</Group>
+        <Number>2</Number>
+        <NodeCount>6</NodeCount>
+        <Points>
+          <LayoutPoint>
+            <X>0.25</X>
+            <Y>0.48</Y>
+          </LayoutPoint>
+          <LayoutPoint>
+            <X>0.75</X>
+            <Y>0.85</Y>
+          </LayoutPoint>
+        </Points>
+        <Rows>1</Rows>
+        <Columns>1</Columns>
+        <Serpentine>false</Serpentine>
+        <Closed>false</Closed>
+        <PixelSize>5</PixelSize>
+      </PreviewElement>
+    </Elements>
+    <Enabled>false</Enabled>
+    <ControlFile />
+    <BuildSignature />
+    <ControlHash />
+  </Layout>
+  <Assignments>
+    <PreviewAssignment>
+      <ChannelName>Arch 01</ChannelName>
+      <Group>1</Group>
+      <Number>1</Number>
+      <Pixel>1</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 02</ChannelName>
+      <Group>1</Group>
+      <Number>1</Number>
+      <Pixel>2</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 03</ChannelName>
+      <Group>1</Group>
+      <Number>1</Number>
+      <Pixel>3</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 04</ChannelName>
+      <Group>1</Group>
+      <Number>1</Number>
+      <Pixel>4</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 05</ChannelName>
+      <Group>1</Group>
+      <Number>1</Number>
+      <Pixel>5</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 06</ChannelName>
+      <Group>1</Group>
+      <Number>1</Number>
+      <Pixel>6</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 07</ChannelName>
+      <Group>1</Group>
+      <Number>2</Number>
+      <Pixel>1</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 08</ChannelName>
+      <Group>1</Group>
+      <Number>2</Number>
+      <Pixel>2</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 09</ChannelName>
+      <Group>1</Group>
+      <Number>2</Number>
+      <Pixel>3</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 10</ChannelName>
+      <Group>1</Group>
+      <Number>2</Number>
+      <Pixel>4</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 11</ChannelName>
+      <Group>1</Group>
+      <Number>2</Number>
+      <Pixel>5</Pixel>
+    </PreviewAssignment>
+    <PreviewAssignment>
+      <ChannelName>Arch 12</ChannelName>
+      <Group>1</Group>
+      <Number>2</Number>
+      <Pixel>6</Pixel>
+    </PreviewAssignment>
+  </Assignments>
+</PreviewControl>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EffectLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>1</Version>
+  <Name>Original editable work</Name>
+  <Items>
+    <LibraryItem>
+      <Id>d4e847714aca4e13ac371b35564b6e9f</Id>
+      <Name>Three-part arch block</Name>
+      <Kind>Group</Kind>
+      <Group>
+        <FrameMs>50</FrameMs>
+        <DurationMs>1000</DurationMs>
+        <Rows>
+          <LibraryRow>
+            <Id>eae4b6e60c234bb78a4a4d7b4ce7e9eb</Id>
+            <Name>Manual RGB 1</Name>
+            <Kind>RGB</Kind>
+            <Width>0</Width>
+            <Height>0</Height>
+          </LibraryRow>
+          <LibraryRow>
+            <Id>f61b91a6642b4bc4ab2083e2a00f21c9</Id>
+            <Name>Manual RGB 2</Name>
+            <Kind>RGB</Kind>
+            <Width>0</Width>
+            <Height>0</Height>
+          </LibraryRow>
+          <LibraryRow>
+            <Id>79a7d410c19b4dc18630f64889debcbb</Id>
+            <Name>Manual RGB 3</Name>
+            <Kind>RGB</Kind>
+            <Width>0</Width>
+            <Height>0</Height>
+          </LibraryRow>
+          <LibraryRow>
+            <Id>face4d802e2e481a88a22addb4abd9ab</Id>
+            <Name>Manual RGB 4</Name>
+            <Kind>RGB</Kind>
+            <Width>0</Width>
+            <Height>0</Height>
+          </LibraryRow>
+        </Rows>
+        <Effects>
+          <Effect>
+            <Id>a8bc136e50564ca4954c46471b497db0</Id>
+            <TargetId>eae4b6e60c234bb78a4a4d7b4ce7e9eb</TargetId>
+            <Kind>Level</Kind>
+            <ColorHtml>#FF0000</ColorHtml>
+            <StartMs>0</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>0.4</Level>
+            <UseEndpoints>false</UseEndpoints>
+            <StartLevel>0.4</StartLevel>
+            <EndLevel>0.4</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>92176b8027654d9ebdaa84ba320552ff</Id>
+            <TargetId>eae4b6e60c234bb78a4a4d7b4ce7e9eb</TargetId>
+            <Kind>RampUp</Kind>
+            <ColorHtml>#00FF00</ColorHtml>
+            <StartMs>100</StartMs>
+            <DurationMs>150</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>0.35</StartLevel>
+            <EndLevel>1</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>5e4d7919ebcd4167b0f40b448d977a6b</Id>
+            <TargetId>eae4b6e60c234bb78a4a4d7b4ce7e9eb</TargetId>
+            <Kind>RampDown</Kind>
+            <ColorHtml>#0000FF</ColorHtml>
+            <StartMs>250</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>1</StartLevel>
+            <EndLevel>0</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>3d78dc87c440437c9a9168922a838e1f</Id>
+            <TargetId>eae4b6e60c234bb78a4a4d7b4ce7e9eb</TargetId>
+            <Kind>Level</Kind>
+            <ColorHtml>#FF0000</ColorHtml>
+            <StartMs>500</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>0.4</Level>
+            <UseEndpoints>false</UseEndpoints>
+            <StartLevel>0.4</StartLevel>
+            <EndLevel>0.4</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>c2820bb30c9846d28222808a0792af9a</Id>
+            <TargetId>eae4b6e60c234bb78a4a4d7b4ce7e9eb</TargetId>
+            <Kind>RampUp</Kind>
+            <ColorHtml>#00FF00</ColorHtml>
+            <StartMs>600</StartMs>
+            <DurationMs>150</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>0.35</StartLevel>
+            <EndLevel>1</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>df2daf30a33c4285b3e18f97ab2a0a96</Id>
+            <TargetId>eae4b6e60c234bb78a4a4d7b4ce7e9eb</TargetId>
+            <Kind>RampDown</Kind>
+            <ColorHtml>#0000FF</ColorHtml>
+            <StartMs>750</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>1</StartLevel>
+            <EndLevel>0</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>5490c224f97f4c5db1075127bd71d668</Id>
+            <TargetId>f61b91a6642b4bc4ab2083e2a00f21c9</TargetId>
+            <Kind>Level</Kind>
+            <ColorHtml>#FF0000</ColorHtml>
+            <StartMs>50</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>0.4</Level>
+            <UseEndpoints>false</UseEndpoints>
+            <StartLevel>0.4</StartLevel>
+            <EndLevel>0.4</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>800faba710194aa693f757a3e3777e9d</Id>
+            <TargetId>f61b91a6642b4bc4ab2083e2a00f21c9</TargetId>
+            <Kind>RampUp</Kind>
+            <ColorHtml>#00FF00</ColorHtml>
+            <StartMs>150</StartMs>
+            <DurationMs>150</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>0.35</StartLevel>
+            <EndLevel>1</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>e93656b327b94f8b81186dbf007bc076</Id>
+            <TargetId>f61b91a6642b4bc4ab2083e2a00f21c9</TargetId>
+            <Kind>RampDown</Kind>
+            <ColorHtml>#0000FF</ColorHtml>
+            <StartMs>300</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>1</StartLevel>
+            <EndLevel>0</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>8985f8946a4a405393faf9f99f3ea0bf</Id>
+            <TargetId>f61b91a6642b4bc4ab2083e2a00f21c9</TargetId>
+            <Kind>Level</Kind>
+            <ColorHtml>#FF0000</ColorHtml>
+            <StartMs>550</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>0.4</Level>
+            <UseEndpoints>false</UseEndpoints>
+            <StartLevel>0.4</StartLevel>
+            <EndLevel>0.4</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>2cd6911218774ebab5e054a7745d6dca</Id>
+            <TargetId>f61b91a6642b4bc4ab2083e2a00f21c9</TargetId>
+            <Kind>RampUp</Kind>
+            <ColorHtml>#00FF00</ColorHtml>
+            <StartMs>650</StartMs>
+            <DurationMs>150</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>0.35</StartLevel>
+            <EndLevel>1</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>84041d429486441f86dc2549487bee3a</Id>
+            <TargetId>f61b91a6642b4bc4ab2083e2a00f21c9</TargetId>
+            <Kind>RampDown</Kind>
+            <ColorHtml>#0000FF</ColorHtml>
+            <StartMs>800</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>1</StartLevel>
+            <EndLevel>0</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>4ce4ac18aae04b05bc943855d26d9212</Id>
+            <TargetId>79a7d410c19b4dc18630f64889debcbb</TargetId>
+            <Kind>Level</Kind>
+            <ColorHtml>#FF0000</ColorHtml>
+            <StartMs>100</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>0.4</Level>
+            <UseEndpoints>false</UseEndpoints>
+            <StartLevel>0.4</StartLevel>
+            <EndLevel>0.4</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>aae5e21174ca4880ba86e645d94493c4</Id>
+            <TargetId>79a7d410c19b4dc18630f64889debcbb</TargetId>
+            <Kind>RampUp</Kind>
+            <ColorHtml>#00FF00</ColorHtml>
+            <StartMs>200</StartMs>
+            <DurationMs>150</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>0.35</StartLevel>
+            <EndLevel>1</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>c4e213c4d5a64b34b6c0518f2a779197</Id>
+            <TargetId>79a7d410c19b4dc18630f64889debcbb</TargetId>
+            <Kind>RampDown</Kind>
+            <ColorHtml>#0000FF</ColorHtml>
+            <StartMs>350</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>1</StartLevel>
+            <EndLevel>0</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>765ce2210f2244f3ada00e7b5ab9e2fe</Id>
+            <TargetId>79a7d410c19b4dc18630f64889debcbb</TargetId>
+            <Kind>Level</Kind>
+            <ColorHtml>#FF0000</ColorHtml>
+            <StartMs>600</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>0.4</Level>
+            <UseEndpoints>false</UseEndpoints>
+            <StartLevel>0.4</StartLevel>
+            <EndLevel>0.4</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>bad8715144ca4cb3867e36ad039ac305</Id>
+            <TargetId>79a7d410c19b4dc18630f64889debcbb</TargetId>
+            <Kind>RampUp</Kind>
+            <ColorHtml>#00FF00</ColorHtml>
+            <StartMs>700</StartMs>
+            <DurationMs>150</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>0.35</StartLevel>
+            <EndLevel>1</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+          <Effect>
+            <Id>af19db0a060e4100a9035f9aaa1efacb</Id>
+            <TargetId>79a7d410c19b4dc18630f64889debcbb</TargetId>
+            <Kind>RampDown</Kind>
+            <ColorHtml>#0000FF</ColorHtml>
+            <StartMs>850</StartMs>
+            <DurationMs>100</DurationMs>
+            <Level>1</Level>
+            <UseEndpoints>true</UseEndpoints>
+            <StartLevel>1</StartLevel>
+            <EndLevel>0</EndLevel>
+            <Curve />
+            <Frames />
+            <SpeedDivisor>1</SpeedDivisor>
+            <FadeInMs>0</FadeInMs>
+            <FadeOutMs>0</FadeOutMs>
+          </Effect>
+        </Effects>
+      </Group>
+    </LibraryItem>
+    <LibraryItem>
+      <Id>4a20a53e763544e5991b1a329ff93df1</Id>
+      <Name>Authored serial recipe</Name>
+      <Kind>Custom</Kind>
+      <Definition>
+        <Id>9352c2cccc5043d392bfd8577f61d656</Id>
+        <Name>Handcrafted three-part recipe</Name>
+        <Parts>
+          <CustomPart>
+            <Kind>Level</Kind>
+            <LengthCells>2</LengthCells>
+            <StartLevel>0.4</StartLevel>
+            <EndLevel>0.4</EndLevel>
+            <ColorHtml>#FF0000</ColorHtml>
+          </CustomPart>
+          <CustomPart>
+            <Kind>RampUp</Kind>
+            <LengthCells>3</LengthCells>
+            <StartLevel>0.35</StartLevel>
+            <EndLevel>1</EndLevel>
+            <ColorHtml>#00FF00</ColorHtml>
+          </CustomPart>
+          <CustomPart>
+            <Kind>RampDown</Kind>
+            <LengthCells>2</LengthCells>
+            <StartLevel>1</StartLevel>
+            <EndLevel>0</EndLevel>
+            <ColorHtml>#0000FF</ColorHtml>
+          </CustomPart>
+        </Parts>
+      </Definition>
+    </LibraryItem>
+  </Items>
+</EffectLibrary>

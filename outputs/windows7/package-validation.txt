@@ -1,0 +1,2 @@
+PASS: extracted ZIP demo resolves its local WAV and identified control file, schema4/layout2/raw12, prepared plan, five638-byte recording packets, and legacy custom-demo migration. No audio/native output/visible UI opened.
+PASS: exact I386/GUI/CLR4/CorFlags3 inspected. ZIP CRC and every packaged SHA256 checked. Source and full net40 reference hashes are in validation.json.
